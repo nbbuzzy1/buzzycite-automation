@@ -9,13 +9,13 @@ options.add_argument("--headless")
 def buzzycite_automation():
 	chrome_browser = webdriver.Chrome('./chromedriver.exe', options=options)
 	chrome_browser.get('https://buzzycite.com')
-	time.sleep(30)
+	time.sleep(95)
 	buzzycite_page_interaction(chrome_browser)
 
 	chrome_browser.get('https://google.com')
-	time.sleep(20)
+	time.sleep(35)
 	google_page_interaction(chrome_browser)
-	time.sleep(20)
+	time.sleep(95)
 	buzzycite_page_interaction(chrome_browser)
 	chrome_browser.close()
 
@@ -23,7 +23,7 @@ def buzzycite_automation():
 def buzzycite_page_interaction(chrome_browser):
 	case_search_button = chrome_browser.find_element_by_xpath("//i[text()='search']")
 	case_search_button.click()
-	time.sleep(75)
+	time.sleep(95)
 	search_panel = chrome_browser.find_element_by_xpath("//mat-panel-title[text()='Case Term or Phrase']")
 	search_panel.click()
 
